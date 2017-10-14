@@ -37,7 +37,7 @@ def get_avatar_url(user, size=50):
     user_avatar, created = UserAvatar.objects.get_or_create(user=user)
     now = timezone.now()
 
-    if ((user_avatar.last_update < now - timedelta(days=7)) or created) and user.email:
+    if (user_avatar.last_update < now - timedelta(days=7)) or created:
         user_avatar.avatar_url = libravatar_url(email=user.email, https=True)
         user_avatar.save()
 
@@ -56,6 +56,21 @@ def get_functional_area(name):
     except FunctionalArea.DoesNotExist:
         return None
 
+@library.filter
+def get_mobilising_skill(name):
+    """Return the Mobilising Skills object given the name."""
+    try:
+        return MobilisingSkill.objects.get(name=name)
+    except MobilisingSkill.DoesNotExist:
+        return None
+
+@library.filter
+def get_mobilising_interest(name):
+    """Return the Mobilising Interest object given the name."""
+    try:
+        return MobilisingInterest.objects.get(name=name)
+    except MobilisingInterest.DoesNotExist:
+        return None
 
 @library.filter
 def get_activity_level(user):
