@@ -49,6 +49,14 @@ When you want to start contributing...
 
     $ docker-compose run web ./manage.py loaddata demo_functional_areas
 
+#. Add demo mobilising skills::
+
+    $ docker-compose run web ./manage.py loaddata demo_mobilising_skills
+
+#. Add demo mobilising interests::
+
+    $ docker-compose run web ./manage.py loaddata demo_mobilising_interests
+
 #. Add demo events::
 
     $ docker-compose run web ./manage.py loaddata demo_events
@@ -62,4 +70,4 @@ Running ReMo
      $ docker-compose up
      (lots of output - be patient...)
 
-#. Develop!
+#. Open the `local site <http://127.0.0.1:8000>`_ and develop!
