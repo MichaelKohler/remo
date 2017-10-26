@@ -14,11 +14,11 @@ class Migration(migrations.Migration):
         migrations.AlterField(
             model_name='userprofile',
             name='mobilising_interests',
-            field=models.ManyToManyField(related_name='users_matching_interests', to='profiles.MobilisingInterest', blank=True),
+            field=models.ManyToManyField(related_name='users_matching_interests', to='profiles.MobilisingInterest', blank=True, default=''),
         ),
         migrations.AlterField(
             model_name='userprofile',
             name='mobilising_skills',
-            field=models.ManyToManyField(related_name='users_matching_skills', to='profiles.MobilisingSkill', blank=True),
+            field=models.ManyToManyField(related_name='users_matching_skills', to='profiles.MobilisingSkill', blank=True, default=''),
         ),
     ]
