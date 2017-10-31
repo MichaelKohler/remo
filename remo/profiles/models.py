@@ -96,7 +96,7 @@ class FunctionalArea(models.Model):
 
 @python_2_unicode_compatible
 class MobilisingSkill(models.Model):
-    """Mobilising skills."""
+    """Mobilising expertise."""
     name = models.CharField(max_length=100, unique=True)
     slug = models.SlugField(blank=True, max_length=100)
     active = models.BooleanField(default=True)
@@ -124,7 +124,7 @@ class MobilisingSkill(models.Model):
 
 @python_2_unicode_compatible
 class MobilisingInterest(models.Model):
-    """Mobilising interests."""
+    """Mobilizing learning interests."""
     name = models.CharField(max_length=100, unique=True)
     slug = models.SlugField(blank=True, max_length=100)
     active = models.BooleanField(default=True)
