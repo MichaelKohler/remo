@@ -118,8 +118,8 @@ class MobilisingSkill(models.Model):
 
     class Meta:
         ordering = ['name']
-        verbose_name = 'mobilising skill'
-        verbose_name_plural = 'mobilising skills'
+        verbose_name = 'mobilizing expertise'
+        verbose_name_plural = 'mobilizing expertise'
 
 
 @python_2_unicode_compatible
@@ -146,8 +146,8 @@ class MobilisingInterest(models.Model):
 
     class Meta:
         ordering = ['name']
-        verbose_name = 'mobilising interest'
-        verbose_name_plural = 'mobilising interests'
+        verbose_name = 'mobilizing learning interest'
+        verbose_name_plural = 'mobilizing learning interests'
 
 
 class UserProfile(models.Model):
