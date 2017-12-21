@@ -143,8 +143,9 @@ class ChangeProfileForm(happyforms.ModelForm):
 
         # Do not raise a validation error if the user belongs to the Alumni
         # group or has admin privileges
-        if (not mentor and not
-                self.request.user.groups.filter(name='Admin').exists()):
+        if (not mentor and
+                (self.request.user.groups.filter(name='Admin').exists() or
+                self.request.user.groups.filter(name='Council').exists())):
             msg = u'This field is required'
             self.errors['mentor'] = self.error_class([msg])
 
