@@ -13,7 +13,7 @@ def profiles_set_groups(sender, **kwargs):
     perms = {'create_user': ['Admin', 'Mentor'],
              'can_edit_profiles': ['Admin'],
              'can_delete_profiles': ['Admin'],
-             'can_change_mentor': ['Admin', 'Council']}
+             'can_change_mentor': ['Admin', 'Council', 'Peers']}
 
     add_permissions_to_groups('profiles', perms)
 
