@@ -161,7 +161,7 @@ def dashboard(request):
     if user.groups.filter(Q(name='Admin') | Q(name='Council') | Q(name='Onboarding')).exists():
         args['reps_without_profile'] = reps.filter(userprofile__registration_complete=False)
 
-    if user.groups.filter(name='Admin').exists():
+    if user.groups.filter(Q(name='Admin') | Q(name='Council') | Q(name='Peers')).exists():
         args['reps_without_mentors'] = reps.filter(
             userprofile__registration_complete=True, userprofile__mentor=None)
 
