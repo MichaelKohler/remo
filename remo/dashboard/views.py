@@ -130,6 +130,7 @@ def dashboard(request):
     my_mentees = User.objects.filter(userprofile__mentor=user,
                                      userprofile__registration_complete=True,
                                      groups__name='Rep')
+    reps = User.objects.filter(groups__name='Rep')
 
     args['my_budget_requests'] = budget_requests.filter(my_q).distinct()
     args['my_swag_requests'] = swag_requests.filter(my_q).distinct()
@@ -157,12 +158,15 @@ def dashboard(request):
     else:
         args['my_planning_requests'] = planning_requests.filter(my_q_assigned).distinct()
 
+    if user.groups.filter(Q(name='Admin') | Q(name='Council') | Q(name='Onboarding')).exists():
+        args['reps_without_profile'] = reps.filter(userprofile__registration_complete=False)
+
     if user.groups.filter(name='Admin').exists():
-        args['is_admin'] = True
-        reps = User.objects.filter(groups__name='Rep')
         args['reps_without_mentors'] = reps.filter(
             userprofile__registration_complete=True, userprofile__mentor=None)
-        args['reps_without_profile'] = reps.filter(userprofile__registration_complete=False)
+
+    if user.groups.filter(name='Admin').exists():
+        args['is_admin'] = True
 
     statsd.incr('dashboard.dashboard_reps')
     return render(request, 'dashboard_reps.jinja', args)
