@@ -157,6 +157,10 @@ When you want to start contributing...
 
      (venv)$ ./manage.py loaddata demo_events
 
+   To load *demo report initatives* run::
+
+     (venv)$ ./manage.py loaddata demo_reports
+
    To fetch *bugzilla bugs* run::
 
      (venv)$ ./manage.py fetch_bugs

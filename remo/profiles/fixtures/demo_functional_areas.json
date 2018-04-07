@@ -18,15 +18,6 @@
         }
     },
     {
-        "pk": 4,
-        "model": "profiles.functionalarea",
-        "fields": {
-            "active": true,
-            "name": "Apps",
-            "slug": "apps"
-        }
-    },
-    {
         "pk": 5,
         "model": "profiles.functionalarea",
         "fields": {
@@ -108,15 +99,6 @@
         }
     },
     {
-        "pk": 29,
-        "model": "profiles.functionalarea",
-        "fields": {
-            "active": true,
-            "name": "Firefox OS",
-            "slug": "firefox-os"
-        }
-    },
-    {
         "pk": 13,
         "model": "profiles.functionalarea",
         "fields": {
@@ -135,15 +117,6 @@
         }
     },
     {
-        "pk": 41,
-        "model": "profiles.functionalarea",
-        "fields": {
-            "active": true,
-            "name": "Hive Network",
-            "slug": "hive-network"
-        }
-    },
-    {
         "pk": 15,
         "model": "profiles.functionalarea",
         "fields": {
@@ -159,15 +132,6 @@
             "active": true,
             "name": "Infrastructure Security",
             "slug": "infrastructure-security"
-        }
-    },
-    {
-        "pk": 17,
-        "model": "profiles.functionalarea",
-        "fields": {
-            "active": true,
-            "name": "Labs",
-            "slug": "labs"
         }
     },
     {
@@ -204,15 +168,6 @@
             "active": true,
             "name": "Metrics",
             "slug": "metrics"
-        }
-    },
-    {
-        "pk": 42,
-        "model": "profiles.functionalarea",
-        "fields": {
-            "active": true,
-            "name": "Open Badges",
-            "slug": "open-badges"
         }
     },
     {
@@ -366,24 +321,6 @@
             "active": true,
             "name": "Web Development",
             "slug": "web-development"
-        }
-    },
-    {
-        "pk": 40,
-        "model": "profiles.functionalarea",
-        "fields": {
-            "active": true,
-            "name": "WebFWD",
-            "slug": "webfwd"
-        }
-    },
-    {
-        "pk": 44,
-        "model": "profiles.functionalarea",
-        "fields": {
-            "active": true,
-            "name": "Webmaker",
-            "slug": "webmaker"
         }
     },
     {

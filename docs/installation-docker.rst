@@ -61,6 +61,10 @@ When you want to start contributing...
 
     $ docker-compose run web ./manage.py loaddata demo_events
 
+#. Add demo report iniatives::
+
+    $ docker-compose run web ./manage.py loaddata demo_reports
+
 ************
 Running ReMo
 ************
