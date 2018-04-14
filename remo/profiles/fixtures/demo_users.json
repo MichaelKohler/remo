@@ -5,17 +5,16 @@
         "fields": {
             "username": "admin",
             "first_name": "Michael",
-            "last_name": "Kohler",
+            "last_name": "Smith",
             "is_active": true,
             "is_superuser": false,
-            "is_staff": true,
+            "is_staff": false,
             "last_login": "2018-04-07T00:10:35Z",
             "groups": [
                 5,
                 8
             ],
             "user_permissions": [],
-            "password": "bcrypt2015_12_15$2b$12$u.t2bc5XxAMQfjGhGwrUpuvouOileoVab/qIkz2QLUUCsMDfI8xku$2015-12-15",
             "email": "admin@example.com",
             "date_joined": "2018-01-01T05:29:21Z"
         }
@@ -29,7 +28,7 @@
             "last_name": "Dalton",
             "is_active": true,
             "is_superuser": false,
-            "is_staff": true,
+            "is_staff": false,
             "last_login": "2018-01-02T05:29:21Z",
             "groups": [
                 1,
@@ -40,7 +39,6 @@
                 8
             ],
             "user_permissions": [],
-            "password": "bcrypt2015_12_15$2b$12$u.t2bc5XxAMQfjGhGwrUpuvouOileoVab/qIkz2QLUUCsMDfI8xku$2015-12-15",
             "email": "allrounder@example.com",
             "date_joined": "2014-10-04T05:29:21Z"
         }
@@ -50,18 +48,17 @@
         "pk": 3,
         "fields": {
             "username": "peer",
-            "first_name": "Henrik",
-            "last_name": "Mitsch",
+            "first_name": "Steven",
+            "last_name": "Miller",
             "is_active": true,
             "is_superuser": false,
-            "is_staff": true,
+            "is_staff": false,
             "last_login": "2018-01-02T05:29:21Z",
             "groups": [
                 2,
                 8
             ],
             "user_permissions": [],
-            "password": "bcrypt2015_12_15$2b$12$u.t2bc5XxAMQfjGhGwrUpuvouOileoVab/qIkz2QLUUCsMDfI8xku$2015-12-15",
             "email": "peer@example.com",
             "date_joined": "2013-05-03T05:29:21Z"
         }
@@ -75,14 +72,13 @@
             "last_name": "Henderson",
             "is_active": true,
             "is_superuser": false,
-            "is_staff": true,
+            "is_staff": false,
             "last_login": "2018-04-07T00:07:51Z",
             "groups": [
                 7,
                 8
             ],
             "user_permissions": [],
-            "password": "bcrypt2015_12_15$2b$12$u.t2bc5XxAMQfjGhGwrUpuvouOileoVab/qIkz2QLUUCsMDfI8xku$2015-12-15",
             "email": "council@example.com",
             "date_joined": "2017-02-18T05:29:21Z"
         }
@@ -96,14 +92,13 @@
             "last_name": "Walker",
             "is_active": true,
             "is_superuser": false,
-            "is_staff": true,
+            "is_staff": false,
             "last_login": "2018-01-02T05:29:21Z",
             "groups": [
                 4,
                 8
             ],
             "user_permissions": [],
-            "password": "bcrypt2015_12_15$2b$12$u.t2bc5XxAMQfjGhGwrUpuvouOileoVab/qIkz2QLUUCsMDfI8xku$2015-12-15",
             "email": "onboarding@example.com",
             "date_joined": "2015-12-24T05:29:21Z"
         }
@@ -117,14 +112,13 @@
             "last_name": "Graham",
             "is_active": true,
             "is_superuser": false,
-            "is_staff": true,
+            "is_staff": false,
             "last_login": "2018-01-02T05:29:21Z",
             "groups": [
                 1,
                 8
             ],
             "user_permissions": [],
-            "password": "bcrypt2015_12_15$2b$12$u.t2bc5XxAMQfjGhGwrUpuvouOileoVab/qIkz2QLUUCsMDfI8xku$2015-12-15",
             "email": "review@example.com",
             "date_joined": "2016-08-12T05:29:21Z"
         }
@@ -138,14 +132,13 @@
             "last_name": "Sudarshan",
             "is_active": true,
             "is_superuser": false,
-            "is_staff": true,
+            "is_staff": false,
             "last_login": "2018-01-02T05:29:21Z",
             "groups": [
                 3,
                 8
             ],
             "user_permissions": [],
-            "password": "bcrypt2015_12_15$2b$12$u.t2bc5XxAMQfjGhGwrUpuvouOileoVab/qIkz2QLUUCsMDfI8xku$2015-12-15",
             "email": "resources@example.com",
             "date_joined": "2018-02-28T05:29:21Z"
         }
@@ -159,14 +152,13 @@
             "last_name": "Miller",
             "is_active": true,
             "is_superuser": false,
-            "is_staff": true,
+            "is_staff": false,
             "last_login": "2018-01-02T05:29:21Z",
             "groups": [
                 6,
                 8
             ],
             "user_permissions": [],
-            "password": "bcrypt2015_12_15$2b$12$u.t2bc5XxAMQfjGhGwrUpuvouOileoVab/qIkz2QLUUCsMDfI8xku$2015-12-15",
             "email": "mentor@example.com",
             "date_joined": "2013-04-01T05:29:21Z"
         }
@@ -180,14 +172,13 @@
             "last_name": "Doe",
             "is_active": true,
             "is_superuser": false,
-            "is_staff": true,
+            "is_staff": false,
             "last_login": "2012-01-02T05:29:21Z",
             "groups": [
                 8,
                 9
             ],
             "user_permissions": [],
-            "password": "bcrypt2015_12_15$2b$12$u.t2bc5XxAMQfjGhGwrUpuvouOileoVab/qIkz2QLUUCsMDfI8xku$2015-12-15",
             "email": "alumni@example.com",
             "date_joined": "2011-04-01T05:29:21Z"
         }
@@ -201,13 +192,12 @@
             "last_name": "Berg",
             "is_active": true,
             "is_superuser": false,
-            "is_staff": true,
+            "is_staff": false,
             "last_login": "2018-01-02T05:29:21Z",
             "groups": [
                 10
             ],
             "user_permissions": [],
-            "password": "bcrypt2015_12_15$2b$12$u.t2bc5XxAMQfjGhGwrUpuvouOileoVab/qIkz2QLUUCsMDfI8xku$2015-12-15",
             "email": "mozillian@example.com",
             "date_joined": "2016-04-01T05:29:21Z"
         }
