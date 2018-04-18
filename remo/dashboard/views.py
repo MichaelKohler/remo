@@ -170,8 +170,15 @@ def dashboard(request):
         args['reps_without_profile'] = reps.filter(userprofile__registration_complete=False)
 
     if user.groups.filter(Q(name='Admin') | Q(name='Council') | Q(name='Peers')).exists():
+        # We want to show
+        #   - Reps with completed profiles and no mentor
+        #   - Reps with mentors who are Alumni
+        # while not including any Alumni Reps
         args['reps_without_mentors'] = reps.filter(
-            userprofile__registration_complete=True, userprofile__mentor=None)
+            ~Q(groups__name='Alumni') &
+            ((Q(userprofile__registration_complete=True) & Q(userprofile__mentor=None)) |
+                Q(userprofile__mentor__groups__name='Alumni'))
+        )
 
     statsd.incr('dashboard.dashboard_reps')
     return render(request, 'dashboard_reps.jinja', args)
