@@ -68,13 +68,13 @@ class EmailMentorForm(BaseEmailUsersForm):
         mentor = request.user.userprofile.mentor
         if mentor:
             from_email = '%s <%s>' % (request.user.get_full_name(),
-                                    request.user.email)
+                                      request.user.email)
             send_remo_mail.delay(sender=from_email,
-                                recipients_list=[mentor.id],
-                                subject=subject,
-                                message=message,
-                                email_template=template,
-                                data=data)
+                                 recipients_list=[mentor.id],
+                                 subject=subject,
+                                 message=message,
+                                 email_template=template,
+                                 data=data)
 
 
 class EditSettingsForm(happyforms.ModelForm):

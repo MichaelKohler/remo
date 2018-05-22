@@ -141,6 +141,7 @@ def get_date(days=0, weeks=0):
     return (timezone.now().date() +
             datetime.timedelta(days=days, weeks=weeks))
 
+
 def get_date_from(date=timezone.now().date(), days=0, weeks=0):
     """Return a date in UTC timezone, given an offset in days and or weeks added
     to a given date. The offset can be either positive or negative.
