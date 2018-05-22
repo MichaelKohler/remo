@@ -174,10 +174,12 @@ def dashboard(request):
         #   - Reps with completed profiles and no mentor
         #   - Reps with mentors who are Alumni
         # while not including any Alumni Reps
-        alumni_ids = User.objects.filter(groups__name='Alumni')
+        alumni_ids = User.objects.filter(groups__name='Alumni').values_list('id', flat=True)
         reps_with_alumni_mentors_q = Q(userprofile__mentor__id__in=alumni_ids)
-        reps_without_mentor_q = Q(userprofile__registration_complete=True, userprofile__mentor__isnull=True)
-        args['reps_without_mentors'] = reps.filter(reps_with_alumni_mentors_q | reps_without_mentor_q)
+        reps_without_mentor_q = Q(userprofile__registration_complete=True,
+                                  userprofile__mentor__isnull=True)
+        args['reps_without_mentors'] = reps.filter(reps_with_alumni_mentors_q |
+                                                   reps_without_mentor_q)
 
     statsd.incr('dashboard.dashboard_reps')
     return render(request, 'dashboard_reps.jinja', args)
