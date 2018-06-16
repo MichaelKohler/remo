@@ -1,6 +1,8 @@
 import happyforms
 import re
 
+from datetime import timedelta
+
 from django import forms
 from django.conf import settings
 from django.contrib.auth.models import User
@@ -14,7 +16,7 @@ from product_details import product_details
 from pytz import common_timezones
 
 from remo.base.templatetags.helpers import user_is_rep
-from remo.base.utils import (get_date, get_date_from)
+from remo.base.utils import get_date
 from remo.profiles.models import (FunctionalArea, MobilisingInterest, MobilisingSkill,
                                   UserProfile, UserStatus)
 
@@ -256,8 +258,7 @@ class UserStatusForm(happyforms.ModelForm):
         if 'expected_date' in cdata:
             start_date = cdata['start_date']
             expected_date = cdata['expected_date']
-            max_period = get_date_from(date=start_date,
-                                       weeks=MAX_UNAVAILABILITY_PERIOD)
+            max_period = start_date + timedelta(weeks=MAX_UNAVAILABILITY_PERIOD)
 
             if expected_date < tomorrow:
                 msg = (u'Return day cannot be earlier than {0}'
