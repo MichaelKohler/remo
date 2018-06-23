@@ -33,7 +33,7 @@
             </tr>
           </thead>
           <tbody>
-            {% for rep in mentor.mentees.exclude(user__groups__name='Alumni').order_by('user__first_name') %}
+            {% for rep in mentor.mentees.exclude(user__groups__name='Alumni').order_by('user__first_name', 'user__last_name') %}
               <tr>
                 <td class="{{ rep.user|get_activity_level }}
                            {% if rep.user|user_is_unavailable %}
