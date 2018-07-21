@@ -479,14 +479,12 @@ class ViewsTest(RemoTestCase):
                 eq_(str(getattr(event, field)), self.data[field])
 
         # Test excluded fields
-        pad_url = 'http://example.com/remo-' + event.slug
         mozilla_event = {'on': True, 'off': False}
 
         eq_(set(self.data['categories']),
             set(event.categories.values_list('id', flat=True)))
         eq_(self.data['campaign'], [event.campaign_id])
 
-        eq_(event.planning_pad_url, pad_url)
         eq_(event.lat, self.data['lat'])
         eq_(event.lon, self.data['lon'])
         eq_(event.mozilla_event, mozilla_event[self.data['mozilla_event']])
