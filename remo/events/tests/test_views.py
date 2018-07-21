@@ -4,7 +4,6 @@ import mock
 
 from django.core import mail
 from django.core.urlresolvers import reverse
-from django.test.utils import override_settings
 from django.utils.encoding import iri_to_uri
 from django.utils.timezone import make_aware, now
 
