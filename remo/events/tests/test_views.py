@@ -453,8 +453,6 @@ class ViewsTest(RemoTestCase):
         self.assertJinja2TemplateUsed(response, 'edit_event.jinja')
 
     @mock.patch('django.contrib.messages.success')
-    @override_settings(ETHERPAD_URL="http://example.com")
-    @override_settings(ETHERPAD_PREFIX="remo-")
     def test_edit_event_rep(self, mock_success):
         """Test edit event with rep permissions."""
         user = UserFactory.create(groups=['Rep'])

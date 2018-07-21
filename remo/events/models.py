@@ -155,12 +155,6 @@ class Event(models.Model):
         if not self.pk:
             self.slug = slugify(self.name, instance=self)
 
-        # Calculate planning pad url
-        if not self.planning_pad_url:
-            url = urljoin(settings.ETHERPAD_URL,
-                          getattr(settings, 'ETHERPAD_PREFIX', '') + self.slug[:45])
-            self.planning_pad_url = url
-
         # Update action items
         if self.pk:
             current_event = Event.objects.get(id=self.pk)
