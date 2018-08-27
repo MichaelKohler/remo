@@ -161,11 +161,6 @@ def dashboard(request):
         args['all_budget_requests'] = budget_requests.all()[:20]
         args['all_swag_requests'] = swag_requests.all()[:20]
 
-    if user.groups.filter(Q(name='Admin') | Q(name='Council')).exists():
-        args['my_planning_requests'] = planning_requests
-    else:
-        args['my_planning_requests'] = planning_requests.filter(my_q_assigned).distinct()
-
     if user.groups.filter(Q(name='Admin') | Q(name='Council') | Q(name='Onboarding')).exists():
         args['reps_without_profile'] = reps.filter(userprofile__registration_complete=False)
 
