@@ -32,8 +32,8 @@ def send_report_digest():
     query_start = make_aware(datetime.combine(today, datetime.min.time()), pytz.UTC)
     query_end = make_aware(datetime.combine(today, datetime.max.time()), pytz.UTC)
     reports = NGReport.objects.filter(Q(created_on__range=[query_start, query_end],
-                                        report_date__lte=today) |
-                                      Q(report_date=today,
+                                        report_date__lte=today)
+                                      | Q(report_date=today,
                                         activity__name__in=[
                                             ACTIVITY_EVENT_CREATE,
                                             ACTIVITY_EVENT_ATTEND]))
