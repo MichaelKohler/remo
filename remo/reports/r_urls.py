@@ -1,7 +1,7 @@
 from django.conf.urls import url
 
 from remo.reports import views
-OPTIONAL_PARAMETER_REGEX = '(?:/(?P<day>\d+)/(?P<id>\d+))?'
+OPTIONAL_PARAMETER_REGEX = r'(?:/(?P<day>\d+)/(?P<id>\d+))?'
 
 urlpatterns = [
     url(r'^(?P<year>\d+)/(?P<month>\w+)%s/$' % OPTIONAL_PARAMETER_REGEX,
