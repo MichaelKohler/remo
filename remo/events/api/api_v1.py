@@ -187,7 +187,7 @@ class EventResource(RemoThrottleMixin, ModelResource):
                     qset |= Q(**{key: term})
             qset |= (Q(owner__userprofile__display_name__istartswith=query)
                      | Q(owner__userprofile__local_name__istartswith=query)
-                     | Q(owner__email__istartswith=query) |
+                     | Q(owner__email__istartswith=query)
                      | Q(owner__userprofile__private_email__istartswith=query)
                      | Q(country__istartswith=query)
                      | Q(region__istartswith=query)
