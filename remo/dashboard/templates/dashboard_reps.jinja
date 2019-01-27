@@ -1084,15 +1084,15 @@
       </div>
     </div>
     {% endif %}
-    {% if reps_inactive2 is defined %}
+    {% if reps_inactive6 is defined %}
     <div class="section">
       <p class="title">
-        <a href="#emptyprofiles">Inactive > 2 months ({{ reps_inactive2.count() }})</a>
+        <a href="#emptyprofiles">Inactive > 6 months ({{ reps_inactive6.count() }})</a>
       </p>
       <div id="emptyprofilesTab" class="content">
         <div class="row">
           <p class="desc">
-            Reps that have not filed a report in the past 8 weeks:
+            Reps that have not filed a report in the past 26 weeks (6 months):
           </p>
           <table class="dashboard-table responsive">
             <thead>
@@ -1105,7 +1105,7 @@
               </tr>
             </thead>
             <tbody>
-              {% for rep in reps_inactive2 %}
+              {% for rep in reps_inactive6 %}
                 <tr>
                   <td class="{{ rep|get_activity_level }}
                              {% if rep|user_is_unavailable %}

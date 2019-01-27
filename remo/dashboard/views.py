@@ -181,9 +181,9 @@ def dashboard(request):
         q_active_12 = Q(
             ng_reports__report_date__range=[get_date(weeks=-52), get_date(weeks=0)])
         args['reps_inactive12'] = reps.filter(~q_active_12).distinct()
-        q_active_2 = Q(
-            ng_reports__report_date__range=[get_date(weeks=-8), get_date(weeks=0)])
-        args['reps_inactive2'] = reps.filter(~q_active_2).distinct()
+        q_active_6 = Q(
+            ng_reports__report_date__range=[get_date(weeks=-26), get_date(weeks=0)])
+        args['reps_inactive6'] = reps.filter(~q_active_6).distinct()
 
     statsd.incr('dashboard.dashboard_reps')
     return render(request, 'dashboard_reps.jinja', args)
