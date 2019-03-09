@@ -229,7 +229,7 @@ def edit_event(request, slug=None, clone=None):
     can_delete_event = False
     if (not created
         and (event.owner == request.user
-              or request.user.has_perm('events.can_delete_events'))):
+             or request.user.has_perm('events.can_delete_events'))):
         can_delete_event = True
 
     return render(request, 'edit_event.jinja',
