@@ -271,7 +271,7 @@ class UserProfile(models.Model):
         d = timezone.now().date()
         age = ((d.year - self.birth_date.year)
                - int((d.month, d.day)
-                   < (self.birth_date.month, self.birth_date.day)))
+                     < (self.birth_date.month, self.birth_date.day)))
         return age
 
     def clean(self, *args, **kwargs):

@@ -34,7 +34,7 @@ def send_report_digest():
     reports = NGReport.objects.filter(Q(created_on__range=[query_start, query_end],
                                         report_date__lte=today)
                                       | Q(report_date=today,
-                                        activity__name__in=[
+                                          activity__name__in=[
                                             ACTIVITY_EVENT_CREATE,
                                             ACTIVITY_EVENT_ATTEND]))
     reports = reports.distinct()

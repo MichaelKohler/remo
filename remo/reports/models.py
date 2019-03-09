@@ -443,7 +443,7 @@ def delete_ng_report(sender, instance, **kwargs):
     # report that date, don't do anything
     if (instance.is_future_report
             or (NGReport.objects.filter(user=instance.user, report_date=instance.report_date)
-                             .exclude(pk=instance.id).exists())):
+                .exclude(pk=instance.id).exists())):
         return
 
     try:
@@ -473,7 +473,7 @@ def delete_ng_report(sender, instance, **kwargs):
             longest_end = previous_report.report_date
         elif (previous_report and next_report
               and (next_report.report_date
-               - previous_report.report_date).days > 7):
+                   - previous_report.report_date).days > 7):
             # Compare the number of reports registered from the starting point
             # of the longest streak up until the date of the deleted report,
             # with the number of reports registered from the date of the
@@ -503,7 +503,7 @@ def delete_ng_report(sender, instance, **kwargs):
             current_start = next_report.report_date
         elif (previous_report and next_report
                 and (next_report.report_date
-                 - previous_report.report_date).days > 7):
+                     - previous_report.report_date).days > 7):
             current_start = next_report.report_date
 
     instance.user.userprofile.current_streak_start = current_start

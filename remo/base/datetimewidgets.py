@@ -172,8 +172,8 @@ class SelectTimeWidget(Widget):
             # If we were given an initial value,
             # make sure the correct meridiem gets selected.
             if (self.meridiem_val is not None
-                    and self.meridiem_val.startswith('p')):
-                    meridiem_choices = [('p.m.', 'p.m.'), ('a.m.', 'a.m.')]
+                and self.meridiem_val.startswith('p')):
+                meridiem_choices = [('p.m.', 'p.m.'), ('a.m.', 'a.m.')]
             else:
                 meridiem_choices = [('a.m.', 'a.m.'), ('p.m.', 'p.m.')]
 

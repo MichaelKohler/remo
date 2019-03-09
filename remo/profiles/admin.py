@@ -199,12 +199,12 @@ class UserAdmin(ExportMixin, UserAdmin):
     inlines = [UserProfileInline]
     list_filter = (UserAdmin.list_filter
                    + ('userprofile__registration_complete', RepProfileFilter,
-                    MozillianProfileFilter, MentorProfileFilter,
-                    CouncilProfileFilter, AlumniProfileFilter,
-                    AdminProfileFilter, ActivityCampaign,
-                    'userprofile__is_rotm_nominee',
-                    'userprofile__date_joined_program',
-                    'ng_reports__report_date', UserProfileFilter))
+                      MozillianProfileFilter, MentorProfileFilter,
+                      CouncilProfileFilter, AlumniProfileFilter,
+                      AdminProfileFilter, ActivityCampaign,
+                      'userprofile__is_rotm_nominee',
+                      'userprofile__date_joined_program',
+                      'ng_reports__report_date', UserProfileFilter))
     list_display = UserAdmin.list_display + ('get_groups',)
     search_fields = (UserAdmin.search_fields + ('userprofile__country',))
 

@@ -127,8 +127,8 @@ class EventResource(RemoThrottleMixin, ModelResource):
         """Return owner profile url."""
         return (settings.SITE_URL
                 + reverse('profiles_view_profile',
-                        kwargs={'display_name':
-                                bundle.obj.owner.userprofile.display_name}))
+                kwargs={'display_name':
+                        bundle.obj.owner.userprofile.display_name}))
 
     def dehydrate_event_url(self, bundle):
         """Return event url."""
