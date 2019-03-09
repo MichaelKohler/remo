@@ -127,7 +127,7 @@ def fetch_bugs(components=COMPONENTS, days=None):
                     if flag['status'] == '?' and flag['name'] == BUG_REVIEW:
                         bug.pending_mentor_validation = True
                     if (flag['status'] == '?' and flag['name'] == 'needinfo'
-                        and 'requestee' in flag):
+                            and 'requestee' in flag):
                         email = flag['requestee']
                         user = get_object_or_none(User, email=email)
                         if user:

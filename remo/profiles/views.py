@@ -191,7 +191,7 @@ def view_profile(request, display_name):
         raise Http404
 
     if (not user.userprofile.registration_complete
-        and not request.user.has_perm('profiles.can_edit_profiles')):
+            and not request.user.has_perm('profiles.can_edit_profiles')):
         raise Http404
 
     nominee_form = forms.RotmNomineeForm(request.POST or None,

@@ -102,10 +102,10 @@ def view_event(request, slug):
 
     # Display a message if the event owner needs to submit post event data
     if (request.user == event.owner and event.is_past_event
-        and event.has_new_metrics
-        and not any([metric.outcome for metric in event.eventmetricoutcome_set.all()])):
-            msg = render_to_string('includes/view_post_event_metrics.jinja', {'event': event})
-            messages.info(request, mark_safe(msg))
+            and event.has_new_metrics
+            and not any([metric.outcome for metric in event.eventmetricoutcome_set.all()])):
+        msg = render_to_string('includes/view_post_event_metrics.jinja', {'event': event})
+        messages.info(request, mark_safe(msg))
 
     if request.method == 'POST':
         if not request.user.is_authenticated():

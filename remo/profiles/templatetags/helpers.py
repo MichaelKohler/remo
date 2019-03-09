@@ -72,3 +72,4 @@ def get_activity_level(user):
             return 'inactive-high'
         return 'inactive-low'
     return ''
+
