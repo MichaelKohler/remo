@@ -1249,13 +1249,18 @@ footer {
     color: white;
     padding: 48px 0;
     line-height: 18px;
-    a { color: rgb(103,167,208); }
-    a:link { color: rgb(103,167,208); }
-    a:visited { color: rgb(103,167,208); }
-    a:hover { color: rgb(83,147,188); }
-    a:active { color: rgb(83,147,188); }
-    nav { font-family: 'Open Sans', sans-serif; }
-    p { font-size: 13px; }
+    a {
+        text-decoration: underline;
+        color: #fff;
+    }
+    nav {
+        a {
+            text-decoration: none;
+        }
+    }
+    p {
+        font-size: 13px;
+    }
     ul li {
         font-size: 13px;
         font-family: 'Open Sans', sans-serif;
