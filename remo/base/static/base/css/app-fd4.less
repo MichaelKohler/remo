@@ -12,6 +12,10 @@
 @breakMedium: 850px;
 @breakLarge: 960px;
 
+.row {
+    min-width: 95%;
+}
+
 .top-margined {
     margin-top: 20px;
 }
@@ -412,6 +416,10 @@ label.required:after {
    Header Styles
 ----------------------------------------- */
 
+header.row {
+    margin-bottom: 30px;
+}
+
 #login-box {
     float: right;
     padding: 0;
@@ -619,6 +627,11 @@ label.required:after {
     margin: 20px 0px;
 }
 
+.orbit {
+    max-width: 1000px;
+    min-width: 1000px;
+}
+
 .slidereel {
     text-align: center;
 
@@ -796,6 +809,11 @@ label.required:after {
 .map300 {
     .map;
     height: 300px;
+}
+
+.map500 {
+    .map;
+    height: 500px;
 }
 
 #map-overlay {
@@ -2939,6 +2957,9 @@ meter::-o-meter-suboptimum-value {
             border: none;
             border-top: 1px solid #d3d3d3;
         }
+    }
+    .row.panel {
+        min-width: 0;
     }
 }
 
