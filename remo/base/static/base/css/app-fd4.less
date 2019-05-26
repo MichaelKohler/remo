@@ -3042,36 +3042,19 @@ meter::-o-meter-suboptimum-value {
 .dashboard-mentee {
     text-align: center;
     padding: 10px;
-    .vertical-gradient();
     border: none;
-    box-shadow: 0 2px 5px rgba(0,0,0,0.15);
-    text-shadow: 1px 1px 0px rgba(200, 200, 200, 0.75);
-    -webkit-box-shadow: 0 2px 5px rgba(0,0,0,0.15);
-    -moz-box-shadow: 0 2px 5px rgba(0,0,0,0.25);
-    -moz-border-radius: 5px;
+    background-color: #fff;
+    border: 1px solid #d7d7db;
     border-radius: 5px;
     -moz-transition:box-shadow .1s ease-in;
     -webkit-transition:box-shadow .1s ease-in;
     transition:box-shadow .1s ease-in;
     &:hover,
     &:focus {
-        box-shadow: 0 2px 5px gray;
-        -webkit-box-shadow: 0 2px 5px gray;
-        -moz-box-shadow: 0 2px 5px gray;
+        background-color: rgba(12, 12, 13, 0.1);
     }
-    &.notfilled {
-        .vertical-gradient(#da8589, #b50a11);
-        h6 {
-            color: white;
-            text-shadow: none;
-        }
-    }
-    &.empty {
-        .vertical-gradient(#ff9966, #ff6633);
-        h6 {
-            color: white;
-            text-shadow: none;
-        }
+    h6 {
+        margin-top: 15px;
     }
 }
 
