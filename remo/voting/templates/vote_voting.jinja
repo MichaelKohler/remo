@@ -278,9 +278,8 @@ Mozilla Reps - {{ poll.name }} - Vote
                   </form>
                 {% endif %}
                 <span class="label inline">
-                  Comment {{ loop.index }}
+                  Comment {{ loop.index }} by&nbsp;
                 </span>
-                <span class="grayed">by </span>
                 {% if comment.user.userprofile.display_name == 'ReMoBot' %}
                   {{ comment.user.get_full_name() }}
                 {% else %}
@@ -288,8 +287,7 @@ Mozilla Reps - {{ poll.name }} - Vote
                     {{ comment.user.get_full_name() }}
                   </a>
                 {% endif %}
-                <span class="grayed"
-                      data-time="{{ comment.created_on|format_datetime_iso }}"
+                <span data-time="{{ comment.created_on|format_datetime_iso }}"
                       title="{{ comment.created_on }}">
                   at {{ comment.created_on }}
                 </span><br>
